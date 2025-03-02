@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Notes</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <!-- Replace with your own logo SVG if needed -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="logo-icon">
+          <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <path d="M10 13 8 17h2l2-4"/>
+          <path d="m14 13-2 4h2"/>
+        </svg>
+        <h1>Smart Notes</h1>
+      </div>
+      <div id="status" class="status"></div>
+    </header>
+    
+    <main>
+      <textarea id="notes-area" placeholder="Enter your bullet-point notes here..."></textarea>
+      
+      <div class="button-container">
+        <button id="save-btn" class="btn primary">Save</button>
+        <button id="download-btn" class="btn secondary">Download</button>
+        <button id="improve-btn" class="btn accent">Improve with AI</button>
+        <button id="reset-btn" class="btn secondary">Reset</button>
+        <button id="clear-btn" class="btn secondary">Clear</button>
+        <button id="copy-btn" class="btn secondary">Copy</button>
+      </div>
+    </main>
+    
+    <div id="loading-overlay" class="loading-overlay hidden">
+      <div class="spinner"></div>
+      <p>Improving your notes with AI...</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
